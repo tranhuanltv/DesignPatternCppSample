@@ -1,0 +1,10 @@
+# formatting options
+style=allman
+indent=tab
+indent-preproc-block
+indent-preproc-define
+indent-col1-comments
+align-pointer=type
+pad-header
+pad-oper
+unpad-paren
