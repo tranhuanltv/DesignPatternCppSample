@@ -1,4 +1,5 @@
 #pragma once
+#include <assert.h>
 #include "Audio.h"
 #include "NullAudio.h"
 
@@ -13,6 +14,7 @@ public:
 
 	static Audio& getAudio()
 	{
+		assert(service_ != 0);
 		return *service_;
 	}
 
