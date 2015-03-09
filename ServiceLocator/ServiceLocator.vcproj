@@ -193,6 +193,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\LoggedAudio.h"
+				>
+			</File>
+			<File
 				RelativePath=".\NullAudio.h"
 				>
 			</File>

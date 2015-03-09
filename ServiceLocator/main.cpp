@@ -1,5 +1,15 @@
 #include "Locator.h"
 #include "ConsoleAudio.h"
+#include "LoggedAudio.h"
+
+void enableAudioLogging()
+{
+	// Decorate the existing service.
+	Audio *service = new LoggedAudio(Locator::getAudio());
+
+	// Swap it in.
+	Locator::provide(service);
+}
 
 int main()
 {
@@ -11,6 +21,9 @@ int main()
 	ConsoleAudio consoleAudio;
 	Locator::provide(&consoleAudio);
 	Locator::getAudio().playSound(1002);
+
+	enableAudioLogging();
+	Locator::getAudio().playSound(1003);
 
 	return 0;
 }
